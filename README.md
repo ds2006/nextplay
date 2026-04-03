@@ -46,7 +46,7 @@ The application utilizes a PostgreSQL table with the following structure:
 2. **Install dependencies:**
    ```bash
    npm install
-3. **Configure Environment Variables:**
+3. **Configure Environment Variables**
 4. **Launch the app:**
    ```bash
    npm run dev
