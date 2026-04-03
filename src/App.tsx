@@ -594,8 +594,6 @@ export default function App() {
   // ── On mount: try to restore session silently ──────────────────────────
   useEffect(() => {
     const storedName = localStorage.getItem('tb_name');
-    const storedUid  = localStorage.getItem('tb_uid');
-
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       // Case 1: active Supabase session AND stored name → restore silently
       if (session?.user && storedName) {
