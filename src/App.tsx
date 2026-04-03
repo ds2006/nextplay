@@ -293,20 +293,10 @@ useEffect(() => {
   return (
     <div className="welcome-root">
       <div className="welcome-card">
-        <div className="welcome-logo">⬡</div>
         <h1 className="welcome-title">Task Board</h1>
-        <p className="welcome-sub">Your personal workspace. No account needed — just enter your name.</p>
+        <p className="welcome-sub">Your personal workspace. No account needed, just enter your name.</p>
         <div className="welcome-features">
           <div className="welcome-feature">
-            <span className="wf-icon">🔒</span>
-            <div><p className="wf-title">Private by default</p><p className="wf-desc">Only you can see your tasks</p></div>
-          </div>
-          <div className="welcome-feature">
-            <span className="wf-icon">☁️</span>
-            <div><p className="wf-title">Persists across sessions</p><p className="wf-desc">Come back and your tasks are still here</p></div>
-          </div>
-          <div className="welcome-feature">
-            <span className="wf-icon">⚡</span>
             <div><p className="wf-title">No sign-up required</p><p className="wf-desc">Just enter your name and go</p></div>
           </div>
         </div>
@@ -594,6 +584,7 @@ export default function App() {
   // ── On mount: try to restore session silently ──────────────────────────
   useEffect(() => {
     const storedName = localStorage.getItem('tb_name');
+
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       // Case 1: active Supabase session AND stored name → restore silently
       if (session?.user && storedName) {
