@@ -46,6 +46,7 @@ The application utilizes a PostgreSQL table with the following structure:
 2. **Install dependencies:**
    ```bash
    npm install
+   npm install @supabase/supabase-js lucide-react canvas-confetti clsx tailwind-merge
 3. **Configure Environment Variables**
 4. **Launch the app:**
    ```bash
