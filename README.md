@@ -2,7 +2,7 @@
 
 A modern, minimalist Kanban-style task management application built with **React**, **Vite**, and **Supabase**. This tool is designed with a "UX-first" philosophy, focusing on a clean interface and smooth user experience for efficient productivity.
 
-## 🚀 Features
+## Features
 
 * **Drag-and-Drop Workflow:** Seamlessly move tasks between columns (Status updates).
 * **Full CRUD:** Add, edit, delete, and view tasks with ease.
@@ -11,13 +11,13 @@ A modern, minimalist Kanban-style task management application built with **React
 * **Organization:** Track due dates, labels, and external links for every task.
 * **Responsive Design:** A sleek, card-based UI that adapts to your screen.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React.js, Vite, Tailwind CSS
 * **Backend/Database:** Supabase (PostgreSQL)
 * **State Management:** React Hooks (useState, useEffect)
 
-## 📋 Database Schema
+## Database Schema
 
 The application utilizes a PostgreSQL table with the following structure:
 
@@ -31,7 +31,7 @@ The application utilizes a PostgreSQL table with the following structure:
 | `activity` | jsonb | Task History Log |
 | `label_names`| text[]| Tagging System |
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 * Node.js (v18 or higher)
@@ -43,3 +43,10 @@ The application utilizes a PostgreSQL table with the following structure:
    ```bash
    git clone <your-repo-url>
    cd <project-folder-name>
+2. **Install dependencies:**
+   ```bash
+   npm install
+3. **Configure Environment Variables:**
+4. **Launch the app:**
+   ```bash
+   npm run dev
