@@ -1,11 +1,11 @@
-# Sleek Kanban Task Board
+# Kanban Task Board
 
 A modern, minimalist Kanban-style task management application built with **React**, **Vite**, and **Supabase**. This tool is designed with a "UX-first" philosophy, focusing on a clean interface and smooth user experience for efficient productivity.
 
 ## Features
 
 * **Drag-and-Drop Workflow:** Seamlessly move tasks between columns (Status updates).
-* **Full CRUD:** Add, edit, delete, and view tasks with ease.
+* **Full Functionality:** Add, edit, delete, and view tasks with ease.
 * **Smart Filtering:** Filter tasks based on urgency levels to focus on what matters most.
 * **Search Functionality:** Quickly find specific tasks via a real-time search bar.
 * **Organization:** Track due dates, labels, and external links for every task.
