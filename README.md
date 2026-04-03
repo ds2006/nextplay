@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# Sleek Kanban Task Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimalist Kanban-style task management application built with **React**, **Vite**, and **Supabase**. This tool is designed with a "UX-first" philosophy, focusing on a clean interface and smooth user experience for efficient productivity.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Drag-and-Drop Workflow:** Seamlessly move tasks between columns (Status updates).
+* **Full CRUD:** Add, edit, delete, and view tasks with ease.
+* **Smart Filtering:** Filter tasks based on urgency levels to focus on what matters most.
+* **Search Functionality:** Quickly find specific tasks via a real-time search bar.
+* **Organization:** Track due dates, labels, and external links for every task.
+* **Responsive Design:** A sleek, card-based UI that adapts to your screen.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React.js, Vite, Tailwind CSS
+* **Backend/Database:** Supabase (PostgreSQL)
+* **State Management:** React Hooks (useState, useEffect)
 
-## Expanding the ESLint configuration
+## 📋 Database Schema
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The application utilizes a PostgreSQL table with the following structure:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `id` | uuid | Primary Key |
+| `title` | text | Task Heading |
+| `status` | text | Kanban Column (To Do, In Progress, etc.) |
+| `priority` | text | Urgency Level |
+| `due_date` | date | Completion Deadline |
+| `activity` | jsonb | Task History Log |
+| `label_names`| text[]| Tagging System |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💻 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+* Node.js (v18 or higher)
+* A Supabase account and project
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd <project-folder-name>
